@@ -12,34 +12,34 @@ export const Banner = () => {
   const period = 2000;
 
   useEffect(() => {
+    const tick = () => {
+      let i = loopNum % toRotate.length;
+      let fullText = toRotate[i];
+      let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+
+      setText(updatedText);
+
+      if (isDeleting) {
+        setDelta((prevDelta) => prevDelta / 2);
+      }
+
+      if (!isDeleting && updatedText === fullText) {
+        setDelta(period);
+        setIsDeleting(true);
+      } else if (isDeleting && updatedText === "") {
+        setDelta(500);
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
     let ticker = setInterval(() => {
       tick();
     }, delta);
     return () => {
       clearInterval(ticker);
     };
-  }, [text]);
-
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setDelta(period);
-      setIsDeleting(true);
-    } else if (isDeleting && updatedText === "") {
-      setDelta(500);
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-    }
-  };
+  }, [text, delta, isDeleting, loopNum, toRotate, period]);
 
   return (
     <section className="banner" id="home">
