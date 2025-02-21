@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 
 export const Banner = () => {
-  const toRotate = ["FullStack Developer", "React Developer", "Software Developer", "Web Developer", "Systems Designer", "UI/UX Designer"];
+  const toRotate = useMemo(() => ["FullStack Developer", "React Developer", "Software Developer", "Web Developer", "Systems Designer", "UI/UX Designer"], []);
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [text, setText] = useState("");
