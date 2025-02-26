@@ -2,6 +2,7 @@ import { Container, Col, Row, Nav, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project-img2.png";
 
 export const Projects = () => {
   const projects = [
@@ -12,17 +13,24 @@ export const Projects = () => {
       githubLink: "https://github.com/yemregumus/WEB422-Assignment6",
       linkToLive: "https://museumofartnewyork.netlify.app/",
     },
+    {
+      title: "My first portfolio site",
+      description: "I used React.js, Next.js, TailwindCSS to build it and Netlify to deploy. I also used Framer Motion for animations.",
+      imageUrl: projImg2,
+      githubLink: "https://github.com/yemregumus/pfSite",
+      linkToLive: "https://yunusgumus.netlify.app/",
+    },
   ];
 
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col>
             <h2>Projects</h2>
             <p>Here are some of my projects</p>
             <Tab.Container id="projects=tabs" defaultActiveKey="first">
-              <Nav variant="pills" defaultActiveKey="/home">
+              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
                   <Nav.Link eventKey="first">Web Development</Nav.Link>
                 </Nav.Item>
