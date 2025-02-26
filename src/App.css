@@ -498,7 +498,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+.proj-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.proj-btns a {
+  text-decoration: none;
+}
+
+.proj-btns button {
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.proj-btns button:hover {
+  background: linear-gradient(90.21deg, #4a2fbd -5.91%, #aa367c 111.58%);
+  transform: scale(1.05);
+}
+
+.proj-btns button:active {
+  transform: scale(0.98);
+}
+
+/************ Contact Css ************/
 .contact {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   padding: 60px 0 200px 0;
