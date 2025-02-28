@@ -36,7 +36,7 @@ export const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto d-flex flex-row justify-content-center">
               <Nav.Link href="#home" className={activeLink === "home" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink("home")}>
                 Home
               </Nav.Link>
@@ -49,10 +49,10 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/jonasgumusyyz/">
+                <a href="https://www.linkedin.com/in/jonasgumusyyz/" target="_blank" rel="noreferrer">
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="https://github.com/yemregumus">
+                <a href="https://github.com/yemregumus" target="_blank" rel="noreferrer">
                   <img src={navIcon2} alt="" />
                 </a>
               </div>

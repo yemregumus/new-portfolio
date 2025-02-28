@@ -30,7 +30,7 @@ export const Projects = () => {
             <h2>Projects</h2>
             <p>Here are some of my projects</p>
             <Tab.Container id="projects=tabs" defaultActiveKey="first">
-              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center d-flex flex-nowrap overflow-auto nav-justified" id="pills-tab">
                 <Nav.Item>
                   <Nav.Link eventKey="first">Web Development</Nav.Link>
                 </Nav.Item>
