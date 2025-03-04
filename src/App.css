@@ -242,6 +242,64 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
+.vvd {
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.vvd span {
+  z-index: 1;
+}
+
+.vvd::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+.vvd:hover {
+  color: #121212;
+}
+
+.vvd:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.navbar-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align to the right */
+}
+
+@media (max-width: 1024px) {
+  .navbar-text {
+    justify-content: flex-end; /* Align to the right on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-text {
+    justify-content: flex-end; /* Align to the right on mobile */
+  }
+}
+
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
@@ -618,7 +676,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 0 0 0px 0;
   background-image: url("./assets/img/footer-bg.png");
   background-position: center center;
   background-size: cover;
@@ -645,6 +703,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .new-email-bx::before {
   content: "";
@@ -674,15 +733,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 500;
   background: transparent;
   border: 0;
-  padding: 0 15px;
+  padding: 10px 15px;
+  flex: 1;
 }
 .new-email-bx button {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-  padding: 20px 65px;
+  padding: 10px 20px;
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.5px;
   border-radius: 18px;
+  border: none;
+  cursor: pointer;
 }
 .footer img {
   width: 26%;
@@ -693,4 +755,38 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #b8b8b8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .newsletter-bx {
+    padding: 60px 40px;
+    margin-top: 0;
+  }
+  .new-email-bx input {
+    padding: 10px;
+  }
+  .new-email-bx button {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-bx {
+    padding: 40px 20px;
+    margin-top: 0;
+  }
+  .new-email-bx input {
+    padding: 10px;
+  }
+  .new-email-bx button {
+    padding: 10px 15px;
+  }
 }
