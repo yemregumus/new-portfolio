@@ -97,11 +97,7 @@ export const Contact = () => {
                           <span>{buttonText}</span>
                         </button>
 
-                        {status.message && (
-                          <Col>
-                            <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                          </Col>
-                        )}
+                        <div className="status-message">{status.message && <p className={status.success === false ? "danger" : "success"}>{status.message}</p>}</div>
                       </Col>
                     </Row>
                   </form>

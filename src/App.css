@@ -674,6 +674,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 
+.status-message {
+  position: relative;
+  height: 20px;
+}
+
+.status-message p {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.status-message .success {
+  color: rgb(62, 219, 62);
+}
+
+.status-message .danger {
+  color: red;
+}
+
 /************ Footer Css ************/
 .footer {
   padding: 0 0 0px 0;
