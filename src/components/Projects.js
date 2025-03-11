@@ -3,6 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
+import projImg3 from "../assets/img/project-img3.png";
 
 export const Projects = () => {
   const projects = [
@@ -19,6 +20,13 @@ export const Projects = () => {
       imageUrl: projImg2,
       githubLink: "https://github.com/yemregumus/pfSite",
       linkToLive: "https://yunusgumus.netlify.app/",
+    },
+    {
+      title: "My first portfolio site",
+      description: "This project is a personal portfolio website built with React, Bootstrap, Express, and Nodemailer for contact backend. It showcases my skills, projects, and provides a way to contact me.",
+      imageUrl: projImg3,
+      githubLink: "https://github.com/yemregumus/new-portfolio",
+      linkToLive: "https://yegumus.netlify.app/",
     },
   ];
 
@@ -49,8 +57,8 @@ export const Projects = () => {
                     })}
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="second">Tab Two Content</Tab.Pane>
-                <Tab.Pane eventKey="third">Tab Three Content</Tab.Pane>
+                <Tab.Pane eventKey="second"></Tab.Pane>
+                <Tab.Pane eventKey="third"></Tab.Pane>
               </Tab.Content>
             </Tab.Container>
           </Col>
