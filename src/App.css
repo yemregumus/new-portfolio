@@ -475,7 +475,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
   width: 100%;
   font-size: 17px;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.1px;
   font-weight: 500;
   position: relative;
   transition: 0.3s ease-in-out;
