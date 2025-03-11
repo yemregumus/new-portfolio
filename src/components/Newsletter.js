@@ -1,12 +1,17 @@
 import { useState, useEffect } from "react";
-import { Col, Row, Alert } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
+import PopupMessage from "./PopupMessage";
 
 export const Newsletter = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    if (status === "success") clearFields();
-  }, [status]);
+    if (status === "success" || status === "error") {
+      setShowPopup(true);
+      clearFields();
+    }
+  }, [status, message]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,9 +32,6 @@ export const Newsletter = ({ status, message, onValidated }) => {
         <Row>
           <Col lg={12} md={6} xl={5}>
             <h3>Subscribe to my Newsletter</h3>
-            {status === "sending" && <Alert>Sending...</Alert>}
-            {status === "error" && <Alert variant="danger">{message}</Alert>}
-            {status === "success" && <Alert variant="success">{message}</Alert>}
           </Col>
           <Col md={6} xl={7}>
             <form onSubmit={handleSubmit}>
@@ -41,6 +43,9 @@ export const Newsletter = ({ status, message, onValidated }) => {
           </Col>
         </Row>
       </div>
+
+      {/* Conditionally render PopupMessage */}
+      {showPopup && <PopupMessage message={message} onClose={() => setShowPopup(false)} />}
     </Col>
   );
 };
