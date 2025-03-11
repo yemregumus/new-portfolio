@@ -25,10 +25,8 @@ export const Contact = () => {
   };
 
   const formatPhoneNumber = (value) => {
-    // Remove all non-numeric characters
     const cleaned = value.replace(/\D/g, "");
 
-    // Format based on length
     if (cleaned.length <= 3) {
       return `(${cleaned}`;
     } else if (cleaned.length <= 6) {
@@ -70,12 +68,12 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-            <TrackVisibility>{({ isVisible }) => <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us" />}</TrackVisibility>
+            <TrackVisibility>{({ isVisible }) => <img src={contactImg} alt="Contact Us" />}</TrackVisibility>
           </Col>
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <div>
                   <h2>Get In Touch</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
