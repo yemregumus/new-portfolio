@@ -84,11 +84,10 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                I have expertise in React.js, JavaScript, TypeScript, Tailwind CSS, Node.js, Express.js, and MongoDB
+                I have expertise in React.js, JavaScript, TypeScript, Java, Tailwind CSS, Node.js, Express.js, SQL, and MongoDB
                 <br /> I am currently learning Flutter and Angular to expand my skill set
               </p>
               <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                {/*m1 = 95% m2 = 80% m3 = 90%*/}
                 <motion.div className="item" animate={iconAnimation}>
                   <img src={meter1} alt="React.js skill meter" />
                   <h5>

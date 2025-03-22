@@ -43,8 +43,6 @@ export const Newsletter = ({ status, message, onValidated }) => {
           </Col>
         </Row>
       </div>
-
-      {/* Conditionally render PopupMessage */}
       {showPopup && <PopupMessage message={message} onClose={() => setShowPopup(false)} />}
     </Col>
   );

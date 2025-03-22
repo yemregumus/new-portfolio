@@ -1,4 +1,3 @@
-// filepath: /d:/school_stuff/new-portfolio/src/components/Banner.js
 import { useState, useEffect, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
@@ -18,7 +17,7 @@ export const Banner = () => {
       setText(toRotate[loopNum]);
     };
 
-    const interval = setInterval(changeText, 4000); // Change text every 4 seconds
+    const interval = setInterval(changeText, 4000);
     return () => clearInterval(interval);
   }, [loopNum, toRotate]);
 
