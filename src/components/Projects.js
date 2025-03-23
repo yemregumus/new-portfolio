@@ -19,7 +19,7 @@ export const Projects = () => {
   const webProjects = [
     {
       title: "The Met Site",
-      description: "The Metropolitan Museum of Art Site is built with React.js, Bootstrap, and Next.js for dynamic content delivery and server‐side rendering. The site leverages JWT for secure user authentication and authorization.",
+      description: "The MET Site is built with React.js, Bootstrap, and Next.js for dynamic content delivery and server‐side rendering. The site leverages JWT for secure user authentication and authorization.",
       imageUrl: projImg1,
       githubLink: "https://github.com/yemregumus/WEB422-Assignment6",
       linkToLive: "https://museumofartnewyork.netlify.app/",

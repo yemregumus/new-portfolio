@@ -2,7 +2,7 @@ import { Col, Button } from "react-bootstrap";
 
 export const ProjectCard = ({ title, description, imageUrl, githubLink, linkToLive }) => {
   return (
-    <Col sm={6} md={4} lg={3}>
+    <Col sm={6} md={4} lg={4}>
       <div className="proj-imgbx">
         <img src={imageUrl} alt={title} />
         <div className="proj-txtx">
