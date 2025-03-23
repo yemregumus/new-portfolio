@@ -5,6 +5,7 @@ import { HashLink } from "react-router-hash-link";
 import headerImg from "../assets/img/header-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import resume from "../assets/resume.pdf";
 
 export const Banner = () => {
   const toRotate = useMemo(() => ["FullStack Developer", "React Developer", "Software Developer", "Web Developer", "Systems Designer"], []);
@@ -42,6 +43,11 @@ export const Banner = () => {
                       Let's Connect <ArrowRightCircle size={21} />
                     </button>
                   </HashLink>
+                  <a href={resume} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                    <button>
+                      Download My Resume <ArrowRightCircle size={21} />
+                    </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>
