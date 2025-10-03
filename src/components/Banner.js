@@ -8,7 +8,7 @@ import TrackVisibility from "react-on-screen";
 import resume from "../assets/resume.pdf";
 
 export const Banner = () => {
-  const toRotate = useMemo(() => ["FullStack Developer", "React Developer", "Software Developer", "Web Developer", "Systems Designer", "IT Developer"], []);
+  const toRotate = useMemo(() => ["FullStack Developer", "React Developer", "Software Developer", "Web Developer", "Systems Designer"], []);
   const [loopNum, setLoopNum] = useState(0);
   const [text, setText] = useState(toRotate[0]);
 
