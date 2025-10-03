@@ -8,7 +8,7 @@ import TrackVisibility from "react-on-screen";
 import resume from "../assets/resume.pdf";
 
 export const Banner = () => {
-  const toRotate = useMemo(() => ["FullStack Developer", "React Developer", "Software Developer", "Web Developer", "Systems Designer"], []);
+  const toRotate = useMemo(() => ["FullStack Developer", "React Developer", "Software Developer", "Web Developer", "Systems Designer", "IT Developer"], []);
   const [loopNum, setLoopNum] = useState(0);
   const [text, setText] = useState(toRotate[0]);
 
@@ -31,7 +31,7 @@ export const Banner = () => {
               {({ isVisible }) => (
                 <div>
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1 className="title">{`I am Yunus`}</h1>
+                  <h1 className="title">{`I am Jonas`}</h1>
                   <div className="txt-rotate">
                     <span className="wrap">A {text}</span>
                   </div>
